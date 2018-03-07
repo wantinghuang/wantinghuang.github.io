@@ -2,3 +2,5 @@ name: Wan-Ting Huang
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 theme: jekyll-theme-architect
+title: Wonder Wan-Ting
+description: My personal record and sharing
