@@ -8,4 +8,4 @@ Yes, I am looking for a full-time position in **data science**.
 
 ### I got an interview with Microsoft. 
 
-Maybe I will post _how I prepare for job interview_ later. 
+Maybe I will post _how I prepare for job interviews_ later. 
