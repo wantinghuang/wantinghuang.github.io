@@ -22,7 +22,7 @@ PART 2. Questions to them
     
 * 當嘗試過許多model、參數調整，結果卻不夠完美，如何突破？從何開始？
 
-      1. 先質疑feature好不好-->改進方法：domain knowledge很重要，不同管道收集user behavior
+      1. 先質疑feature好不好 -> 改進方法：domain knowledge很重要，不同管道收集user behavior
     
       2. side by side跟同業比較，去看到功能以外的東西
     
@@ -40,7 +40,9 @@ PART 3. About me and my project
 
       * L1 norm可以使得部分權重變為0，L2 norm為什麼不行？
 
-      * 怎麼處理missing value？有沒有其他非regression的方法可以做feature selection？
+      * 怎麼處理missing value？
+      
+      * 有沒有其他非regression的方法可以做feature selection？
 
       * 如果今天建立了兩個模型，要怎麼拿到真實世界（生產線上）測試哪一個好？
 
