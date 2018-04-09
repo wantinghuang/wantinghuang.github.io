@@ -35,17 +35,17 @@ title: Microsoft Data Science Interview
     面試官提問：
 
       * 建立什麼模型？
-      
+
       * 怎麼做feature selection？
-      
+
       * LASSO為什麼可以做feature selection？
-      
+
       * L1 norm可以使得部分權重變為0，L2 norm為什麼不行？
-      
+
       * 怎麼處理missing value？
-      
-      * 有沒有其他非regression的方法可以做feature selection？
-      
+
+      * 有沒有其他非regression的方法可以做feature selection？
+
       * 如果今天建立了兩個模型，要怎麼拿到真實世界（生產線上）測試哪一個好？
 
 
