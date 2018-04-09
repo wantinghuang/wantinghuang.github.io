@@ -14,15 +14,15 @@ title: Microsoft Data Science Interview
 
 * 這份職位要做什麼？
 
-    1. 要分析User behavioral資料，告訴PM分析結果、跟PM溝通
+      1. 要分析User behavioral資料，告訴PM分析結果、跟PM溝通
     
-    2. 建構Language Model開發產品
+      2. 建構Language Model開發產品
     
 * 當嘗試過許多model、參數調整，結果卻不夠完美，如何突破？從何開始？
 
-    1. 先質疑feature好不好-->改進方法：domain knowledge很重要，不同管道收集user behavior
+      1. 先質疑feature好不好-->改進方法：domain knowledge很重要，不同管道收集user behavior
     
-    2. side by side跟同業比較，去看到功能以外的東西
+      2. side by side跟同業比較，去看到功能以外的東西
     
 3. About me and my project
 
