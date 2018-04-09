@@ -3,6 +3,7 @@ layout: post
 title: Microsoft Data Science Interview
 ---
 微軟資料科學家面試總共分四個部分
+<!-- more -->
 
 1. Team Intro
 
