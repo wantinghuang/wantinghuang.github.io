@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Job Hunting Attitude
+title: 找工作的心態
 ---
 釐清以下幾點
 - 自我評估：主管對於這個職位的人的期待及認為他需要具備的能力、特質為何？
