@@ -26,7 +26,7 @@ title: Microsoft Data Science Interview
     
 3. About me and my project
 
-* 實習：資料前處理、資料視覺化、建立類神經網路模型、調整清洗機參數使得清洗結果最好。
+* 實習：資料前處理、資料視覺化、建模、調整參數使得結果最好。
 
     面試官提問：
 
