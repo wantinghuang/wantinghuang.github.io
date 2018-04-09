@@ -4,8 +4,9 @@ title: Microsoft Data Science Interview
 ---
 微軟資料科學家面試大致上分為四部分
 
+
 ## 1. Team Introduction
--------------
+
   * SwiftKey -- Keyboard APP，目前/未來是華為、小米內建的鍵盤。
 
   * 本次在台灣招人的目標：中文的language model與使用者資料開發。
@@ -13,8 +14,9 @@ title: Microsoft Data Science Interview
 <!-- more -->  
 
 
+
 ## 2. Questions to them
--------------
+
 * 這份職位要做什麼？
 
       1. 要分析User behavioral資料，告訴PM分析結果、跟PM溝通
@@ -27,9 +29,10 @@ title: Microsoft Data Science Interview
     
       2. side by side跟同業比較，去看到功能以外的東西
     
-    
+
+
 ## 3. About me and my project
--------------
+
 * 實習：資料前處理、資料視覺化、建模、調整參數使得結果最好。
 
     面試官提問：
@@ -58,8 +61,9 @@ title: Microsoft Data Science Interview
       * 要如何用supervised learning的方法去做這個題目、建模？
 
 
+
 ## 4. Coding
--------------
+
 ```
 Given a list of string, find the index with the longest string.
 ex: ['aa','bbss','ddd','wwww','sss','t']
