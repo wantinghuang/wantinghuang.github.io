@@ -8,7 +8,7 @@ permalink:           pretty
 title:            Wan-Ting Huang
 tagline:          'Data Science'
 description:      'Taiwanese. Love sharing.'
-url:              http://lanyon.getpoole.com
+url:              https://wantinghuang.github.io/
 baseurl:             ''
 paginate:            1
 excerpt_separator:  '<!-- more -->'
