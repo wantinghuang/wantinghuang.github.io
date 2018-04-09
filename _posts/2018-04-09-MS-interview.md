@@ -44,7 +44,7 @@ title: Microsoft Data Science Interview
   面試官提問：
   
     要如何用supervised learning的方法去做這個題目、建模？
-  
+
 4. Coding
 ```
 Given a list of string, find the index with the longest string.
