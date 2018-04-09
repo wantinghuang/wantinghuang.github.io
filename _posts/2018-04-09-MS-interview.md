@@ -35,11 +35,17 @@ title: Microsoft Data Science Interview
     面試官提問：
 
       * 建立什麼模型？
+      
       * 怎麼做feature selection？
+      
       * LASSO為什麼可以做feature selection？
+      
       * L1 norm可以使得部分權重變為0，L2 norm為什麼不行？
+      
       * 怎麼處理missing value？
+      
       * 有沒有其他非regression的方法可以做feature selection？
+      
       * 如果今天建立了兩個模型，要怎麼拿到真實世界（生產線上）測試哪一個好？
 
 * 自然語言處理期末專題：給予電影台詞文本，生成電影名稱。先斷詞，然後找搭配字(2-word) collocation作為電影名稱。如果沒有搭配字，則去標記詞性，找最常出現的時間副詞，和最常出現的名詞或動詞搭配，成為電影名稱。（因為時間副詞帶來空間感，例如明天過後、明日世界、昨日盛開的花朵）
