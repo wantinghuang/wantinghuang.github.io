@@ -4,11 +4,11 @@ title: Microsoft Data Science Interview
 ---
 微軟資料科學家面試大致上分為四部分
 
-PART 1. Team Intro
+PART 1. Team Introduction
 
-    * SwiftKey -- Keyboard APP，目前/未來是華為、小米內建的鍵盤。
+  * SwiftKey -- Keyboard APP，目前/未來是華為、小米內建的鍵盤。
 
-    * 本次在台灣招人的目標：中文的language model與使用者資料開發。
+  * 本次在台灣招人的目標：中文的language model與使用者資料開發。
     
 <!-- more -->  
 
