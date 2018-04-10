@@ -1,3 +1,9 @@
+
+希望可以增加留言區、文章列表、搜尋功能
+
+
+模板取自
+
 # Lanyon
 
 Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
