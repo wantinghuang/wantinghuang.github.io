@@ -30,7 +30,7 @@ title: 找工作的心態
 
 2. 了解公司的薪資水平、可能的面試題目。
 
-      _網上資源如Glassdor, PTT, LeetCode, Qollie都有很豐富的訊息。_
+      _網上資源如Glassdoor, PTT, LeetCode, Qollie都有很豐富的訊息。_
 
 3. 複習履歷、自我介紹及過去做過的projects  
 
