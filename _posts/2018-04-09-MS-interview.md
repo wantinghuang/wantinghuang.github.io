@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Microsoft Data Science Interview
+title: Microsoft Data Scientist Interview
 ---
 微軟資料科學家面試大致上分為四部分
 
