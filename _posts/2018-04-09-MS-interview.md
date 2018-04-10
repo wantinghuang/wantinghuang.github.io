@@ -5,7 +5,7 @@ title: Microsoft Data Scientist Interview
 微軟資料科學家面試大致上分為四部分
 
 
-## 1. Team Introduction   
+### 1. Team Introduction   
   
   * SwiftKey -- Keyboard APP，目前/未來是華為、小米內建的鍵盤。
 
@@ -14,7 +14,7 @@ title: Microsoft Data Scientist Interview
 <!-- more -->    
   
 
-## 2. Questions to them  
+### 2. Questions to them  
   
 * 這份職位要做什麼？
 
@@ -30,7 +30,7 @@ title: Microsoft Data Scientist Interview
     
 
 
-## 3. About me and my project  
+### 3. About me and my project  
   
 * 實習：資料前處理、資料視覺化、建模、調整參數使得結果最好。
 
@@ -61,7 +61,7 @@ title: Microsoft Data Scientist Interview
   
   
 
-## 4. Coding  
+### 4. Coding  
 
 ```
 Given a list of string, find the index with the longest string.
