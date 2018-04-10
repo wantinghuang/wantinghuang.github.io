@@ -12,7 +12,7 @@ title: Microsoft Data Scientist Interview
   * 本次在台灣招人的目標：中文的language model與使用者資料開發。
     
 <!-- more -->    
-  
+<br>
 
 
 ### 2. Questions to them  
@@ -28,7 +28,7 @@ title: Microsoft Data Scientist Interview
       1. 先質疑feature好不好 -> 改進方法：domain knowledge很重要，不同管道收集user behavior
     
       2. side by side跟同業比較，去看到功能以外的東西  
-    
+<br>  
 
 
 ### 3. About me and my project  
@@ -59,7 +59,7 @@ title: Microsoft Data Scientist Interview
     面試官提問：
 
       * 要如何用supervised learning的方法去做這個題目、建模？    
-  
+<br>  
   
 
 ### 4. Coding  
