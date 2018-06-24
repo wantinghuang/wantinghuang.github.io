@@ -56,7 +56,7 @@ AlphaGo跟李世乭對弈的第四局，AlphaGo輸了，後來 DeepMind 團隊�
 
 ## 為什麼正規化(regularization)可以解決 overfitting?
 
-關於L1 norm與L2 norm的比較，請看[這篇](({{ site.baseurl }}/_posts/2018-04-10-l1-l2norm.md) )
+關於L1 norm與L2 norm的比較，請看[這篇](../2018-04-10-l1-l2norm.md )
 
 
 <!-- ## Implementation of solving overfitting-->
