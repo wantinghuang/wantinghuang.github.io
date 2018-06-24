@@ -15,7 +15,7 @@ title: Overfitting
 
 ### 什麼樣的情況是 overfitting? 
 
-![under-overfitting](https://i.ytimg.com/vi/dBLZg-RqoLg/maxresdefault.jpg){:height="50%" width="50%"}
+![under-overfitting](https://i.ytimg.com/vi/dBLZg-RqoLg/maxresdefault.jpg){:height="80%" width="80%"}
 
 以回歸(多項式)模型為例，我們相信的趨勢是綠色的那條線，擬和出來的模型是紅色的線，右邊的圖雖然能夠準確預測每一個樣本點，卻複雜到難以為新的樣本點做預測，或說，我們很難相信右邊的紅色模型預測出來的值會是準確的。
 
