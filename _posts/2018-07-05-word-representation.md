@@ -4,7 +4,7 @@ title: Word Representation and Word Embeddings
 ---
 
 Word Representation，意指用一組數字來代表文字的行為/方式。事實上，有很多種方式可以用一組數字代表文字，目前兩個主流的方式分別為 Distributional Semantics 和 Word Embeddings，而 Word Embeddings 是近年來常用的方式。[1]
-<!-- more-->
+<!-- more -->  
 
 ## Motive
 ### Why we need word representation?
@@ -18,7 +18,7 @@ Word Representation，意指用一組數字來代表文字的行為/方式。事
 1. 字的向量跟 vocabulary list 的順序有關係；也就是說換個順序，字就有不同的向量表示，所以 vocabulary list 要先固定。
 2. 向量並無法反映字跟字之間的關係。舉例來說，car 向量跟 bike 向量的歐式距離是$\sqrt{2}$，car 向量跟 sun 向量也是$\sqrt{2}$，但 car 跟 bike 意義上應該要比較近(同屬交通工具)。
 ```
-Issues: difficult to compute the similarity (i.e. comparing “car”, “bike” and “sun”)
+Issues: difficult to compute the similarity
 ```
 
 所以我們的目標更明確了，要找出一組數字可以代表文字，且能反映字跟字之間的關係。
