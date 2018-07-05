@@ -3,8 +3,8 @@ layout: post
 title: Word Representation and Word Embeddings
 ---
 
-# Word Representation and Word Embeddings
 Word Representation，意指用一組數字來代表文字的行為/方式。事實上，有很多種方式可以用一組數字代表文字，目前兩個主流的方式分別為 Distributional Semantics 和 Word Embeddings，而 Word Embeddings 是近年來常用的方式。[1]
+<!-- more-->
 
 ## Motive
 ### Why we need word representation?
@@ -83,7 +83,7 @@ Word2Vec 是一種以類神經網路為基礎的詞向量產生方式，主要�
 
 | CBOW | skip-gram |
 | ---- | --------- |
-| ![CBOW](https://i.imgur.com/kDuuH3y.png) | ![skip-gram](https://i.imgur.com/F7v8mWG.png) |
+| ![CBOW](https://i.imgur.com/kDuuH3y.png){:height="50%" width="50%"} | ![skip-gram](https://i.imgur.com/F7v8mWG.png){:height="50%" width="50%"} |
 
 以上圖 skip-gram 為例，$x_{k}$ 是某個字的 one-hot vector，$y_{1j}, ..., y_{Cj}$ 代表預測的上下文，$C$ 是上下文的長度，依據要看多少的前後文而決定 $C$ 的大小(也就是看我們覺得這個字會受到多遠的前後文影響，憑此去訂定size)。其中 Hidden layer 是維度 $N (\ll V)$ 的結點 $h_{i}$ 所構成的隱藏層，$h = W^{T}x$ 就是字的 word embedding[3]。
 
@@ -173,7 +173,7 @@ $$\sum_{i,j=1}^{V} f(X_{ik})(w_{i}^{T} w_{k} + b_{i} + b_{k} - \log{X_{ik}})^{2}
 很巧的是，Pennington 等人實驗的結果發現 $x_{max} = 100, \alpha=3/4$ 時模型表現最好，跟 Mikolov 等人在 negative sampling 裡面提出的經驗是一樣的。
 
 GloVe 的優點在於 fast training, scalable, good performance even with small corpus, and small vectors
-
+<!--
 ## Word Embedding Evaluation
 ### Intrinsic Evaluation – Word Analogies
 詞類比性質
@@ -191,7 +191,7 @@ Benefit:
 	Ex. countries cluster together a classifying location words should be possible with word vectors
 - Incorporate any information into them other tasks
 	Ex. project sentiment into words to find most positive/negative words in corpus
-
+-->
 
 ## Implementation
 Gensim: a Word2Vec Library
