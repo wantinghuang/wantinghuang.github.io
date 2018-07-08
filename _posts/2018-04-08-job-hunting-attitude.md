@@ -18,7 +18,7 @@ title: 找工作的心態
 
 3. **耐心，耐心，耐心**
 
-      _做好長期抗戰的心理準備。心理建設可以參考 〈[我的面試之旅](https://www.ptt.cc/bbs/Tech_Job/M.1522466641.A.2FC.html)〉 _
+      _做好長期抗戰的心理準備。心理建設可以參考〈[我的面試之旅](https://www.ptt.cc/bbs/Tech_Job/M.1522466641.A.2FC.html)〉_
 
 <br>
 
