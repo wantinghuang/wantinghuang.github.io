@@ -88,7 +88,7 @@ Word2Vec 是一種以類神經網路為基礎的詞向量產生方式，主要�
 
 以上圖 skip-gram 為例，$x_{k}$ 是某個字的 one-hot vector，$y_{1j}, ..., y_{Cj}$ 代表預測的上下文，$C$ 是上下文的長度，依據要看多少的前後文而決定 $C$ 的大小(也就是看我們覺得這個字會受到多遠的前後文影響，憑此去訂定size)。其中 Hidden layer 是維度 $N (\ll V)$ 的結點 $h_{i}$ 所構成的隱藏層，$h = W^{T}x$ 就是字的 word embeddings [3]。
 
-##### Word2Vec Skip-Gram
+#### Word2Vec Skip-Gram
 
 Word2Vec Skip-Gram 的作法是輸入是某個字，預測這個字的前後文(給定某個長度內)，目標是最大化給定這個字時，前後文出現的機率，
 
@@ -108,13 +108,13 @@ word2vec方法的瓶頸在於 output layer 的神經元個數 (也就是 output 
 large vocabularies or large training corpora -> expensive computations 
 => limit the number of output vectors that must be updated per training instance -> hierarchical softmax, sampling
 
-1. Hierarchical Softmax
+##### Hierarchical Softmax
 
 Idea: compute the probability of leaf nodes using the paths
 
 細節可參考: [類神經網路 -- Hierarchical Probabilistic Neural Network Language Model (Hierarchical Softmax)](http://cpmarkchang.logdown.com/posts/276263--hierarchical-probabilistic-neural-networks-neural-network-language-model)
 
-2. Negative Sampling (NEG)
+##### Negative Sampling (NEG)
 
 Idea: only update a sample of output vectors
 
