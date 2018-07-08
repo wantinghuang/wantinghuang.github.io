@@ -78,7 +78,7 @@ Idea: directly learn low-dimensional word vectors
 
 Word2Vec 是一種以類神經網路為基礎的詞向量產生方式，主要有兩種模型，skip-gram 和 Continuous Bag of Words (CBOW)。**skip-gram** 的概念是給一個字，使用單層的神經網路架構(single hidden layer)去預測這個字的上下文(又稱neighbor)，**CBOW** 是用某個字的上下文(neighbor)去預測這個字，而其中的隱藏層就是我們想要的 word representation，也就是字的 word embedding。
 
-![word2vec model]https://i.imgur.com/ZmeKrRt.png
+![word2vec model](https://i.imgur.com/ZmeKrRt.png)
 
 以上圖 skip-gram 為例，$x_{k}$ 是某個字的 one-hot vector，$y_{1j}, ..., y_{Cj}$ 代表預測的上下文，$C$ 是上下文的長度，依據要看多少的前後文而決定 $C$ 的大小(也就是看我們覺得這個字會受到多遠的前後文影響，憑此去訂定size)。其中 Hidden layer 是維度 $N (\ll V)$ 的結點 $h_{i}$ 所構成的隱藏層，$h = W^{T}x$ 就是字的 word embedding[3]。
 
