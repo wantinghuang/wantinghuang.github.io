@@ -7,13 +7,13 @@ title: Overfitting
 <!-- # Overfitting-->
 
 <!-- ## What is overfitting? -->
-## 什麼是 overfitting?
+## 什麼是 Overfitting?
 
-過度擬和，指訓練的模型過度貼近 training data，導致模型套用到 training data 的時候 error 變大。又稱為過度訓練(overtraining)
+過度擬和，指訓練的模型過度貼近 training data，導致模型套用到 training data 的時候 error 變大。又稱為過度訓練(overtraining)。
 
 <!-- more -->
 
-### 什麼樣的情況是 overfitting? 
+### 什麼樣的情況是 Overfitting? 
 
 ![under-overfitting](https://i.ytimg.com/vi/dBLZg-RqoLg/maxresdefault.jpg){:height="80%" width="80%"}
 
@@ -24,7 +24,7 @@ title: Overfitting
 
 
 <!-- ## Why is it important? -->
-## overfitting 為什麼重要?
+## Overfitting 為什麼重要?
 
 DeepMind 的 Aja Huang 曾經在 2018 Google AI論壇提到：
 ```
@@ -34,7 +34,7 @@ AlphaGo跟李世乭對弈的第四局，AlphaGo輸了，後來 DeepMind 團隊�
 
 
 <!-- ## How to determine if it is overfitting? -->
-## 如何判斷是否有 overfitting?
+## 如何判斷是否有 Overfitting?
 
 <!-- PLOT error curve for training and testing data. -->
 如果隨著模型訓練的時間，training data 的 error 下降，但 testing data 的 error 卻上升，則懷疑模型 overfit.
@@ -42,7 +42,7 @@ AlphaGo跟李世乭對弈的第四局，AlphaGo輸了，後來 DeepMind 團隊�
 ![圖](https://qph.ec.quoracdn.net/main-qimg-39f72925e85c26e105b14ab276206747)
 
 <!-- ## How to solve overfitting? -->
-## 如何解決 overfitting?
+## 如何解決 Overfitting?
 
 1. 對多項式模型，降階，不要用高次項去擬和。降階到哪個地步，有方法檢查。
 <!-- don't use high order model -->
@@ -54,13 +54,14 @@ AlphaGo跟李世乭對弈的第四局，AlphaGo輸了，後來 DeepMind 團隊�
 
 
 
-## 為什麼正規化(regularization)可以解決 overfitting?
+## 為什麼正規化(regularization)可以解決 Overfitting?
 
 關於L1 norm與L2 norm的比較，請看[這篇](https://wantinghuang.github.io/2018/04/10/l1-l2norm/)
 
 
-<!-- ## Implementation of solving overfitting-->
+<!-- ## Implementation of solving overfitting
 ## 解決 overfitting 的實作
 python
 in tensorflow
 in sklearn
+-->
