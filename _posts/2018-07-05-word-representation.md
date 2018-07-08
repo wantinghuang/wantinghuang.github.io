@@ -208,6 +208,7 @@ Benefit:
 
 ## Implementation
 Gensim: a Word2Vec Library
+
 就算不懂上面的理論，直接在python套用Gensim也可以輕鬆得到詞向量，然後丟入模型進行操作。
 
 ## Reference
