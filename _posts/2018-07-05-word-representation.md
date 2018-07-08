@@ -5,10 +5,10 @@ title: Word Representation and Word Embeddings
 Word Representation，意指用一組數字來代表文字的行為/方式。事實上，有很多種方式可以用一組數字代表文字，目前兩個主流的方式分別為 Distributional Semantics 和 Word Embeddings，而 Word Embeddings 是近年來常用的方式。[1]
 <!-- more -->  
 
-## 為什麼需要 word representation?
+## 為什麼需要 Word Representation?
 文字之所以重要，是因為文字本身帶有意涵，我們能從文字中讀到的是其背後的意義，想要對文字的意涵做更多的分析，在計算語言學中就引發了一個問題: 「**有沒有辦法用一組數字來代表文字的意涵?**」 有了這樣的一組數字，我們便可將文字可以放到數學模型中分析。
 
-## Word epresentation 的演變
+## Word Representation 的演變
 要把文字轉成數字，簡單的方法就是做 one-hot encoding/representation (統計上稱為 dummy variable)，也就是令一個向量，長度為所有出現過的字的個數(vocabulary list)，這個向量的每一個位置會對應到 vocabulary list 裡面的某一個字，則每個字可以由某個位置為1，其餘為0的向量代表。如下圖所示
 ![one-hot representation](https://i.imgur.com/NpjvCyC.png)
 我們可以觀察到兩個點:
@@ -84,7 +84,9 @@ Word2Vec 是一種以類神經網路為基礎的詞向量產生方式，主要�
 ##### Word2Vec Skip-Gram
 
 Word2Vec Skip-Gram 的作法是輸入是某個字，預測這個字的前後文(給定某個長度內)，目標是最大化給定這個字時，前後文出現的機率，
+
 that is, maximize likelihood
+
 $$P(w_{o1}, ..., w_{oc}|w_{I}) = \prod_{c=1}^{C}p(w_{oc}|w_{I})$$
 
 等價於 mimize cost/loss function
@@ -102,20 +104,28 @@ large vocabularies or large training corpora -> expensive computations
 ```
 
 1. Hierarchical Softmax
+
 Idea: compute the probability of leaf nodes using the paths
+
 細節可參考: [類神經網路 -- Hierarchical Probabilistic Neural Network Language Model (Hierarchical Softmax)](http://cpmarkchang.logdown.com/posts/276263--hierarchical-probabilistic-neural-networks-neural-network-language-model)
 
 2. Negative Sampling (NEG)
+
 Idea: only update a sample of output vectors
+
 細節可參考: [Mikolov et al., “Distributed representations of words and phrases and their compositionality,” in NIPS, 2013](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf)
+
 Negative Sampling 只更新一部份的 output vectors，因此 loss function 可以改寫成
+
 ![NEG objective function](https://i.imgur.com/SvTUhon.png)
+
 Mikolov 表示:
 the task is to distinguish the target word $w_{O}$ from draws from the noise distribution $P_{n}(w)$ using logistic regression, where there are $k$ negative samples for each data sample.
 
 What is a good $P_{n}(w)$ ?
 Mikolov 表示:
 We investigated a number of choices for $P_{n}(w)$ and found that the unigram distribution $U(w)$ raised to the 3/4rd power (i.e., $U(w)^{3/4}/Z$ ) outperformed significantly the unigram and the uniform distributions.
+
 也就是說，現在還沒有科學的方法說明如何挑選 $P_{n}(w)$，不過經驗法則所找到的函數，其產生的結果的表現勝過現有的其他模型。
 
 
@@ -127,27 +137,44 @@ Empirical setting: unigram model raised to the power of 3/4
 
 
 #### GloVe
+
 細節可參考: [Pennington et al., ”GloVe: Global Vectors for Word Representation ,” in EMNLP, 2014](https://nlp.stanford.edu/pubs/glove.pdf)
-<!-- $P_{ij}$ is the probability that word $w_{j}$ appears in the context of word $w_{i}$ -->
+
 $P_{ij}$ 是 $w_{j}$ 出現在 $w_{i}$ 上下文裡的機率
+
 $$P_{ij} = P(w_{j}|w_{i}) = \frac{X_{ij}}{X_{i}}$$
+
 $X_{ij}$ 代表 $w_{j}$ 在 $w_{i}$ 的上下文裡出現的次數，$X_{i} = \sum_{k}X_{ik}$ 是出現在 $w_{i}$ 的上下文裡所有字數
+
 $w_{i}$ and $w_{j}$ 的關係近可以以他們**同時在 $w_{k}$的上下文裡出現的機率比**作為代表。
+
 <!-- The relationship of $w_{i}$ and $w_{j}$ approximates the ratio of their co-occurrence probabilities with various $w_{k}$ -->
 $\frac{P_{ik}}{P_{jk}}$ 稱為 ratio of co-occurrence probability。
+
 ```
 Idea: ratio of co-occurrence probability can encode meaning
 ```
+
 $$\frac{P_{ik}}{P_{jk}} = F(w_{i},w_{j},w_{k}) = F(w_{i} - w_{j},w_{k}) = F((w_{i}w_{j})^{T} w_{k}) = \frac{F(w_{i}^{T} w_{k})}{w_{j}^{T} w_{k}}$$
+
 令$F(x) = exp(x)$，則
+
 $$w_{i}^{T} w_{k} = \log{P_{ik}} = \log{X_{ik}} - \log{X_{i}}$$
-我們可以加上bias項 $b_{i}$ 讓 $w_{i}$ 獨立於 $k$ (?)，再加上bias項 $b_{k}$ 讓 $w_{k}$ 保持對稱(why?)，得到
+
+我們可以加上bias項 $b_{i}$ 讓 $w_{i}$ 獨立於 $k$ (?)，再加上bias項 $b_{k}$ 讓 $w_{k}$ 保持對稱(為何加bias可以使之獨立、對稱?)，得到
+
 $$w_{i}^{T} w_{k} + b_{i} + b_{k} = \log{X_{ik}}$$
-把這個問題看成迴歸式，用最小平方法(least square estimate)求解，也就是 loss function = $\sum_{i,k=1}^{V} (w_{i}^{T} w_{k} + b_{i} + b_{k} - \log{X_{ik}})^{2}$ 可以找到 $b_{i}, b_{k}, w_{i}, w_{k}$。(?)
+
+把這個問題看成迴歸式，用最小平方法(least square estimate)求解，也就是 loss function = $\sum_{i,k=1}^{V} (w_{i}^{T} w_{k} + b_{i} + b_{k} - \log{X_{ik}})^{2}$ 可以找到 $b_{i}, b_{k}, w_{i}, w_{k}$。(不確定如何計算?)
+
 但其中還有幾個問題，其一是 log 函數會在 0 點無定義，其二是在最小平方法的 loss function 裡，每個 $(w_{i}, w_{k})$ 組合跟 $\log{X_{ik}}$ 的差距都以相等重要性看待，不會因為某組 $(w_{i}, w_{k})$ 比較常共同出現而特別看重這一組的 loss。
+
 所以要再做一些調整，給每組 $(w_{i}, w_{k})$ 權重 $f(X_{ik})$，則 loss function 可以寫成
+
 $$\sum_{i,j=1}^{V} f(X_{ik})(w_{i}^{T} w_{k} + b_{i} + b_{k} - \log{X_{ik}})^{2}$$
+
 權重 $f(x) = (x/x_{max})^{\alpha}$ if $x < x_{max}$ and $f(x) = 1$ otherwise，$x_{max}, \alpha$ 是常數。
+
 很巧的是，Pennington 等人實驗的結果發現 $x_{max} = 100, \alpha=3/4$ 時模型表現最好，跟 Mikolov 等人在 negative sampling 裡面提出的經驗是一樣的。
 
 GloVe 的優點在於 fast training, scalable, good performance even with small corpus, and small vectors
@@ -187,8 +214,8 @@ Gensim: a Word2Vec Library
 
 	- Word Embeddings: represent a word with a low-dimensional vector (e.g. 100 dimensions). The dimensions are usually latent, and often obtained using the information as in the distributional semantics approach (e.g. LSA, word2vec).
 
-2. [NTU-ADLxMLDS word embedding 陳蘊濃教授講義](https://www.csie.ntu.edu.tw/~yvchen/f106-adl/doc/171016+171019_WordEmbeddings.pdf)
-3. [NTHU-ML Word2Vec 吳尚鴻教授講義](http://www.cs.nthu.edu.tw/~shwu/courses/ml/labs/10_Keras_Word2Vec/10_Keras_Word2Vec.html)
+2. [NTU-ADLxMLDS word embedding 陳縕儂授課講義](https://www.csie.ntu.edu.tw/~yvchen/f106-adl/doc/171016+171019_WordEmbeddings.pdf)
+3. [NTHU-ML Word2Vec 吳尚鴻授課講義](http://www.cs.nthu.edu.tw/~shwu/courses/ml/labs/10_Keras_Word2Vec/10_Keras_Word2Vec.html)
 the weight matrix $W$ encode a one-hot vector $x$ into a low dimensional dense vector $h$
 
 Note that the weights are shared across words to ensure that each word has a single embedding. This is called weight tying. Also, word2vec is a unsupervised learning task as it does not require explicit labels. An NN can be used for both supervised and unsupervised learning tasks.
