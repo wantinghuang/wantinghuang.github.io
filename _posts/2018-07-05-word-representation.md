@@ -83,13 +83,7 @@ Word2Vec 是一種以類神經網路為基礎的詞向量產生方式，主要�
 以上圖 skip-gram 為例，$x_{k}$ 是某個字的 one-hot vector，$y_{1j}, ..., y_{Cj}$ 代表預測的上下文，$C$ 是上下文的長度，依據要看多少的前後文而決定 $C$ 的大小(也就是看我們覺得這個字會受到多遠的前後文影響，憑此去訂定size)。其中 Hidden layer 是維度 $N (\ll V)$ 的結點 $h_{i}$ 所構成的隱藏層，$h = W^{T}x$ 就是字的 word embedding[3]。
 
 ##### Word2Vec Skip-Gram
-<!--
-```
-Word2Vec Skip-Gram
-Goal: predict surrounding words within a window of each word
-Objective function: maximize the probability of any context word given the current center word
-```
--->
+
 Word2Vec Skip-Gram 的作法是輸入是某個字，預測這個字的前後文(給定某個長度內)，目標是最大化給定這個字時，前後文出現的機率，
 that is, maximize likelihood
 $$P(w_{o1}, ..., w_{oc}|w_{I}) = \prod_{c=1}^{C}p(w_{oc}|w_{I})$$
@@ -99,11 +93,6 @@ $$C(\theta) = -\log P(w_{o1}, ..., w_{oc}|w_{I}) =
 -\sum_{w_{I}} \sum_{c=1}^{C} \log p(w_{oc}|w_{I})$$
 
 其中，word vector 在這個神經網路中的 hidden layer 實現，word embedding matrix (某個字對應到某個向量的 lookup table) 就是 hidden layer weight matrix。
-<!--
-$$s_{j}=hv'_{w_{j}}$$
-$$p(w_{oc}|w_{I}) =y_{jc} = \frac{\exp(s_{jc})}{\sum_{j'=1}^{V}\exp(s_{j'})}$$
-則 loss function 可以改寫為
--->
 
 word2vec方法的瓶頸在於 output layer 的神經元個數 (也就是 output vectors) 等同於總字彙量，如果字彙量或是corpus很大，會帶來很大的計算負擔，因此有了使用 hierarchical softmax 和 negative sampling 等方法**限制每次更新的參數數量**的想法。
 
@@ -124,24 +113,19 @@ Negative Sampling 只更新一部份的 output vectors，因此 loss function �
 ![NEG objective function](https://i.imgur.com/SvTUhon.png)
 Mikolov 表示:
 the task is to distinguish the target word $w_{O}$ from draws from the noise distribution $P_{n}(w)$ using logistic regression, where there are $k$ negative samples for each data sample.
-<!--
-Negative Sampling 只更新一部份的 output vectors，因此 loss function 可以改寫成
-$$C(\theta) = -\log \sigma(v'_{w_o}^{T}v_{w_I}) + \sum_{w_{j} \in W_{neg}} \log \simga(v'_{w_j}^{T}v_{w_I})$$(?)
-$W_{neg}$ 為(?)
-sampling methods: $w_{j} \in \{w_o\} \union W_{neg}$(?)
-1. random smapling
-2. distribution sampling: $w_{j}$ is sampled from P(w)
-what is a good P(w)?
+
+What is a good $P_{n}(w)$ ?
+Mikolov 表示:
+We investigated a number of choices for $P_{n}(w)$ and found that the unigram distribution $U(w)$ raised to the 3/4rd power (i.e., $U(w)^{3/4}/Z$ ) outperformed significantly the unigram and the uniform distributions.
+也就是說，現在還沒有科學的方法說明如何挑選 $P_{n}(w)$，不過經驗法則所找到的函數，其產生的結果的表現勝過現有的其他模型。
+
+
 ```
 Idea: less frequent words sampled more often
 ```
 Empirical setting: unigram model raised to the power of 3/4
 ![NEG empirical example](https://i.imgur.com/whvarGY.png)
--->
-What is a good $P_{n}(w)$ ?
-Mikolov 表示:
-We investigated a number of choices for $P_{n}(w)$ and found that the unigram distribution $U(w)$ raised to the 3/4rd power (i.e., $U(w)^{3/4}/Z$ ) outperformed significantly the unigram and the uniform distributions.
-也就是說，現在還沒有科學的方法說明如何挑選 $P_{n}(w)$，不過經驗法則所找到的函數，其產生的結果的表現勝過現有的其他模型。
+
 
 #### GloVe
 細節可參考: [Pennington et al., ”GloVe: Global Vectors for Word Representation ,” in EMNLP, 2014](https://nlp.stanford.edu/pubs/glove.pdf)
