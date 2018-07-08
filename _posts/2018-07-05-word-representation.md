@@ -222,8 +222,7 @@ Gensim: a Word2Vec Library
 
 2. [NTU-ADLxMLDS word embedding 陳縕儂授課講義](https://www.csie.ntu.edu.tw/~yvchen/f106-adl/doc/171016+171019_WordEmbeddings.pdf)
 3. [NTHU-ML Word2Vec 吳尚鴻授課講義](http://www.cs.nthu.edu.tw/~shwu/courses/ml/labs/10_Keras_Word2Vec/10_Keras_Word2Vec.html)
-the weight matrix $W$ encode a one-hot vector $x$ into a low dimensional dense vector $h$
-
+the weight matrix $W$ encode a one-hot vector $x$ into a low dimensional dense vector $h$. 
 Note that the weights are shared across words to ensure that each word has a single embedding. This is called weight tying. Also, word2vec is a unsupervised learning task as it does not require explicit labels. An NN can be used for both supervised and unsupervised learning tasks.
 
 4. [Word2Vec Skip-Gram Visualization](https://ronxin.github.io/wevi/)
