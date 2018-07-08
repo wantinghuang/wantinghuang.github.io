@@ -230,8 +230,8 @@ Note that the weights are shared across words to ensure that each word has a sin
 5. [使用TENSORFLOW實作WORD2VEC CBOW](https://vinachangblog.wordpress.com/2017/08/13/%E4%BD%BF%E7%94%A8tensorflow%E5%AF%A6%E4%BD%9Cword2vec-cbow/)
 
 6. Word2Vec 相關論文 
-[1] Mikolov T, Chen K, Corrado G, et al. [Efficient Estimation of Word Representations in Vector Space](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf). Computer Science, 2013.（这篇文章就讲了两个模型：CBOW 和 Skip-gram） 
-[2] Mikolov T, Sutskever I, Chen K, et al.  [Distributed representations of words and phrases and their compositionality](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf), 2013.（这篇文章针对Skip-gram模型计算复杂度高的问题提出了一些该进） 
-[3] [Presentation on Word2Vec](https://docs.google.com/file/d/0B7XkCwpI5KDYRWRnd1RzWXQ2TWc/edit) （这是NIPS 2013workshop上Mikolov的PPT报告）
+    [1] Mikolov T, Chen K, Corrado G, et al. [Efficient Estimation of Word Representations in Vector Space](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf). Computer Science, 2013.（这篇文章就讲了两个模型：CBOW 和 Skip-gram） 
+    [2] Mikolov T, Sutskever I, Chen K, et al.  [Distributed representations of words and phrases and their compositionality](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf), 2013.（这篇文章针对Skip-gram模型计算复杂度高的问题提出了一些该进） 
+    [3] [Presentation on Word2Vec](https://docs.google.com/file/d/0B7XkCwpI5KDYRWRnd1RzWXQ2TWc/edit) （这是NIPS 2013workshop上Mikolov的PPT报告）
 
 7. 針對GloVe提出的改進: [Simpler GloVe](https://zhuanlan.zhihu.com/p/31558664)
