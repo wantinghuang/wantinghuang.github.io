@@ -5,8 +5,8 @@ permalink:           pretty
 #relative_permalinks: true
 
 # Setup
-title:            Wan-Ting Huang
-tagline:          'Data Science'
+title:            Amy Huang
+tagline:          'Notes in Data Science World'
 description:      'Tech Blog.'
 url:              https://wantinghuang.github.io/
 baseurl:             ''
@@ -28,3 +28,5 @@ plugins: [jekyll-paginate]
 paginate_path: "page:num"
 
 future: false
+
+markdown: kramdown
