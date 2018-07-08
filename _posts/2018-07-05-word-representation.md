@@ -108,13 +108,13 @@ word2vec方法的瓶頸在於 output layer 的神經元個數 (也就是 output 
 large vocabularies or large training corpora -> expensive computations 
 => limit the number of output vectors that must be updated per training instance -> hierarchical softmax, sampling
 
-##### Hierarchical Softmax
+##### 1. Hierarchical Softmax
 
 Idea: compute the probability of leaf nodes using the paths
 
 細節可參考: [類神經網路 -- Hierarchical Probabilistic Neural Network Language Model (Hierarchical Softmax)](http://cpmarkchang.logdown.com/posts/276263--hierarchical-probabilistic-neural-networks-neural-network-language-model)
 
-##### Negative Sampling (NEG)
+##### 2. Negative Sampling (NEG)
 
 Idea: only update a sample of output vectors
 
