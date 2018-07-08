@@ -145,7 +145,7 @@ Empirical setting: unigram model raised to the power of 3/4
 另一種近年來常用的 word embeddings 模型為 GloVe，由 Pennington 等人提出。
 細節可參考: [Pennington et al., ”GloVe: Global Vectors for Word Representation ,” in EMNLP, 2014](https://nlp.stanford.edu/pubs/glove.pdf)
 
-$P_{ij}$ 是 $w_{j}$ 出現在 $w_{i}$ 上下文裡的機率
+GloVe 的概念是文字之間的**共同出現比**隱藏字意的訊息。令 $P_{ij}$ 是 $w_{j}$ 出現在 $w_{i}$ 上下文裡的機率
 
 $$P_{ij} = P(w_{j}|w_{i}) = \frac{X_{ij}}{X_{i}}$$
 
