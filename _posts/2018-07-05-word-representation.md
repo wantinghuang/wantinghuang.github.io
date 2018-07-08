@@ -65,22 +65,19 @@ Idea: directly learn low-dimensional word vectors
 把文字轉成實數所組成的向量(vectors of real numbers)，這樣的作法稱為 word embedding。
 概念上，word embedding 做的事情是把原本每個字一維的向量空間，投影到一個較低維度的(連續的)向量空間。近年來常用的 word embedding 模型為 word2vec (Mikolov et al. 2013) 和 Glove (Pennington et al., 2014)。
 
-## Benifits of Word Embeddings
-### Why is word embedding good?
+## Word Embeddings 的好處
 給一個語料庫(unlabeled training corpus)，給每個字一個代表向量，其向量帶有語意訊息(semantic information)的好處在於
 1. 可以 cosine similarty 衡量語意的相似度
 2. 詞向量(word vectors)在很多NLP tasks中是有用的、帶有語意的特徵變數
 3. 可以放到類神經網路中(neural networks)並且在訓練過程中更新
 
-## Word Embedding Model - Word2Vec & Glove
-### How to do word embedding?
+## 如何找到一個字的 Word Embeddings?
+### Word Embedding Model - Word2Vec & Glove
 #### Word2Vec
 
 Word2Vec 是一種以類神經網路為基礎的詞向量產生方式，主要有兩種模型，skip-gram 和 Continuous Bag of Words (CBOW)。**skip-gram** 的概念是給一個字，使用單層的神經網路架構(single hidden layer)去預測這個字的上下文(又稱neighbor)，**CBOW** 是用某個字的上下文(neighbor)去預測這個字，而其中的隱藏層就是我們想要的 word representation，也就是字的 word embedding。
 
-| CBOW | skip-gram |
-| ---- | --------- |
-| ![CBOW](https://i.imgur.com/kDuuH3y.png){:height="90%" width="90%"} | ![skip-gram](https://i.imgur.com/F7v8mWG.png){:height="90%" width="90%"} |
+![word2vec model]https://i.imgur.com/ZmeKrRt.png
 
 以上圖 skip-gram 為例，$x_{k}$ 是某個字的 one-hot vector，$y_{1j}, ..., y_{Cj}$ 代表預測的上下文，$C$ 是上下文的長度，依據要看多少的前後文而決定 $C$ 的大小(也就是看我們覺得這個字會受到多遠的前後文影響，憑此去訂定size)。其中 Hidden layer 是維度 $N (\ll V)$ 的結點 $h_{i}$ 所構成的隱藏層，$h = W^{T}x$ 就是字的 word embedding[3]。
 
