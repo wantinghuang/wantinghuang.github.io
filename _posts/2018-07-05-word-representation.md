@@ -21,7 +21,7 @@ Issues: difficult to compute the similarity
 
 所以我們的目標更明確了，要找出一組數字可以代表文字，且能反映字跟字之間的關係。
 ```
-Goal: word representations that capture the relationships between words
+Goal: word representation that capture the relationships between words
 ```
 
 衡量文字的意涵，經常是由上下文推斷，因此我們想找出來代表文字的數字要能反映字詞之間的關係。
