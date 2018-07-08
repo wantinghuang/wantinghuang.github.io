@@ -2,6 +2,17 @@
 layout: post
 title: Word Representation and Word Embeddings
 ---
+<script src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' type='text/javascript'>
+    MathJax.Hub.Config({
+     TeX: { equationNumbers: { autoNumber: &quot;AMS&quot; } },
+     tex2jax: {
+      inlineMath: [ [&#39;$&#39;,&#39;$&#39;], [&quot;\\(&quot;,&quot;\\)&quot;] ],
+      displayMath: [ [&#39;$$&#39;,&#39;$$&#39;], [&quot;\\[&quot;,&quot;\\]&quot;] ],
+      processEscapes: true },
+     &#39;HTML-CSS&#39;: { scale: 90 },
+     displayIndent: &#39;2em&#39;
+    });
+</script> 
 
 Word Representation，意指用一組數字來代表文字的行為/方式。事實上，有很多種方式可以用一組數字代表文字，目前兩個主流的方式分別為 Distributional Semantics 和 Word Embeddings，而 Word Embeddings 是近年來常用的方式。[1]
 <!-- more -->  
