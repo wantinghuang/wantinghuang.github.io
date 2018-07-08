@@ -14,6 +14,7 @@ Word Representation，意指用一組數字來代表文字的行為/方式。事
 我們可以觀察到兩個點:
 1. 字的向量跟 vocabulary list 的順序有關係；也就是說換個順序，字就有不同的向量表示，所以 vocabulary list 要先固定。
 2. 向量並無法反映字跟字之間的關係。舉例來說，car 向量跟 bike 向量的歐式距離是$\sqrt{2}$，car 向量跟 sun 向量也是$\sqrt{2}$，但 car 跟 bike 意義上應該要比較近(同屬交通工具)。
+
 ```
 Issues: difficult to compute the similarity
 ```
@@ -37,12 +38,14 @@ love 前面或後面出現 I 的次數是 2，enjoy 前面或後面出現 I 的�
 但這樣的表示方法有一些缺點:
 1. 當字很多的時候，矩陣 size 很大，向量維度也很高
 2. 矩陣容易有很多 0 ，矩陣 sparse ，則放入模型不容易分析。
+
 ```
 Issues:
 * matrix size increases with vocabulary
 * high dimensional
 * sparsity -> poor robustness
 ```
+
 所以我們需要對基於 window-based co-occurrence matrix 的 vector representation 降維。
 講到降維，第一個想到的應該是 PCA (Principal Component Analysis)，PCA 是基於 SVD (Singular Value Decomposition) 的降維方式，SVD 在 NLP 裡的應用叫做 Latent Semantic Analysis (LSA)。
 簡單講，令 $C$ 是 所有字的 vector representation 組成的矩陣，對 $C$ 做 SVD 分解如下
@@ -53,17 +56,21 @@ $C_{k}$ 就是新的 latent semantic space。
 這個方法的缺點在於:
 1. 需要很大的計算量。computational complexity: $O(mn^2)$ when $n < m$ for $n \times m$ matrix
 2. 很難新增詞彙。因為每新增字詞，就就要重新計算 SVD 矩陣的 eigenvector/value，並且更新每個字的代表向量。
+
 ```
 Issues:
 * computationally expensive
 * difficult to add new words
 ```
+
 所以我們要再想想，有沒有直接用一個低維度向量代表文字的方法?
+
 ```
 Idea: directly learn low-dimensional word vectors
 ```
-把文字轉成實數所組成的向量(vectors of real numbers)，這樣的作法稱為 word embedding。
-概念上，word embedding 做的事情是把原本每個字一維的向量空間，投影到一個較低維度的(連續的)向量空間。近年來常用的 word embedding 模型為 word2vec (Mikolov et al. 2013) 和 Glove (Pennington et al., 2014)。
+
+把文字轉成實數所組成的向量(vectors of real numbers)，這樣的作法稱為 word embeddings。
+概念上，word embedding 做的事情是把原本每個字一維的向量空間，投影到一個較低維度的(連續的)向量空間。近年來常用的 word embeddings 模型為 word2vec (Mikolov et al. 2013) 和 Glove (Pennington et al., 2014)。
 
 ## Word Embeddings 的好處
 給一個語料庫(unlabeled training corpus)，給每個字一個代表向量，其向量帶有語意訊息(semantic information)的好處在於
