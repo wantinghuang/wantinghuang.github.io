@@ -104,11 +104,9 @@ $$C(\theta) = -\log P(w_{o1}, ..., w_{oc}|w_{I}) =
 
 word2vec方法的瓶頸在於 output layer 的神經元個數 (也就是 output vectors) 等同於總字彙量，如果字彙量或是corpus很大，會帶來很大的計算負擔，因此有了使用 hierarchical softmax 和 negative sampling 等方法**限制每次更新的參數數量**的想法。
 
-```
+
 large vocabularies or large training corpora -> expensive computations 
-=> limit the number of output vectors that must be updated per training instance 
-    -> hierarchical softmax, sampling
-```
+=> limit the number of output vectors that must be updated per training instance -> hierarchical softmax, sampling
 
 1. Hierarchical Softmax
 
