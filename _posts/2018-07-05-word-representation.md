@@ -80,7 +80,7 @@ Idea: directly learn low-dimensional word vectors
 
 ## 如何找到一個字的 Word Embeddings?
 ### Word Embedding Model - Word2Vec & Glove
-#### Word2Vec
+### Word2Vec
 
 Word2Vec 是一種以類神經網路為基礎的詞向量產生方式，主要有兩種架構，skip-gram 和 Continuous Bag of Words (CBOW)。**skip-gram** 的概念是給一個字，使用單層的神經網路架構(single hidden layer)去預測這個字的上下文(又稱neighbor)，**CBOW** 是用某個字的上下文(neighbor)去預測這個字，而其中的隱藏層就是我們想要的 word representation，也就是字的 word embedding。
 
@@ -142,7 +142,7 @@ Empirical setting: unigram model raised to the power of 3/4
 ![NEG empirical example](https://i.imgur.com/whvarGY.png)
 
 
-#### GloVe
+### GloVe
 另一種近年來常用的 word embeddings 模型為 GloVe，由 Pennington 等人提出。
 細節可參考: [Pennington et al., ”GloVe: Global Vectors for Word Representation ,” in EMNLP, 2014](https://nlp.stanford.edu/pubs/glove.pdf)
 
