@@ -82,7 +82,7 @@ Idea: directly learn low-dimensional word vectors
 ### Word Embedding Model - Word2Vec & Glove
 #### Word2Vec
 
-Word2Vec 是一種以類神經網路為基礎的詞向量產生方式，主要有兩種模型，skip-gram 和 Continuous Bag of Words (CBOW)。**skip-gram** 的概念是給一個字，使用單層的神經網路架構(single hidden layer)去預測這個字的上下文(又稱neighbor)，**CBOW** 是用某個字的上下文(neighbor)去預測這個字，而其中的隱藏層就是我們想要的 word representation，也就是字的 word embedding。
+Word2Vec 是一種以類神經網路為基礎的詞向量產生方式，主要有兩種架構，skip-gram 和 Continuous Bag of Words (CBOW)。**skip-gram** 的概念是給一個字，使用單層的神經網路架構(single hidden layer)去預測這個字的上下文(又稱neighbor)，**CBOW** 是用某個字的上下文(neighbor)去預測這個字，而其中的隱藏層就是我們想要的 word representation，也就是字的 word embedding。
 
 ![word2vec model](https://i.imgur.com/ZmeKrRt.png)
 
@@ -108,13 +108,13 @@ word2vec方法的瓶頸在於 output layer 的神經元個數 (也就是 output 
 large vocabularies or large training corpora -> expensive computations 
 => limit the number of output vectors that must be updated per training instance -> hierarchical softmax, sampling
 
-##### 1. Hierarchical Softmax
+#### Hierarchical Softmax
 
 Idea: compute the probability of leaf nodes using the paths
 
 細節可參考: [類神經網路 -- Hierarchical Probabilistic Neural Network Language Model (Hierarchical Softmax)](http://cpmarkchang.logdown.com/posts/276263--hierarchical-probabilistic-neural-networks-neural-network-language-model)
 
-##### 2. Negative Sampling (NEG)
+#### Negative Sampling (NEG)
 
 Idea: only update a sample of output vectors
 
@@ -128,6 +128,7 @@ Mikolov 表示:
 the task is to distinguish the target word $w_{O}$ from draws from the noise distribution $P_{n}(w)$ using logistic regression, where there are $k$ negative samples for each data sample.
 
 What is a good $P_{n}(w)$ ?
+
 Mikolov 表示:
 We investigated a number of choices for $P_{n}(w)$ and found that the unigram distribution $U(w)$ raised to the 3/4rd power (i.e., $U(w)^{3/4}/Z$ ) outperformed significantly the unigram and the uniform distributions.
 
