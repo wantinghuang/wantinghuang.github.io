@@ -110,15 +110,15 @@ large vocabularies or large training corpora -> expensive computations
 => limit the number of output vectors that must be updated per training instance -> hierarchical softmax, sampling
 
 #### Hierarchical Softmax
-
+```
 Idea: compute the probability of leaf nodes using the paths
-
+```
 細節可參考: [類神經網路 -- Hierarchical Probabilistic Neural Network Language Model (Hierarchical Softmax)](http://cpmarkchang.logdown.com/posts/276263--hierarchical-probabilistic-neural-networks-neural-network-language-model)
 
 #### Negative Sampling (NEG)
-
+```
 Idea: only update a sample of output vectors
-
+```
 細節可參考: [Mikolov et al., “Distributed representations of words and phrases and their compositionality,” in NIPS, 2013](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf)
 
 Negative Sampling 只更新一部份的 output vectors，因此 loss function 可以改寫成
