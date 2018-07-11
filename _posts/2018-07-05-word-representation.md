@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Word Representation and Word Embeddings
-tags: [word representation, word embeddings, NLP, Word2Vec, Skip-gram]
+tags: [NLP]
 ---
 Word Representation，意指用一組數字來代表文字的行為/方式。事實上，有很多種方式可以用一組數字代表文字，目前兩個主流的方式分別為 Distributional Semantics 和 Word Embeddings，而 Word Embeddings 是近年來常用的方式。[1]
 <!-- more -->  
