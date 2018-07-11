@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Overfitting
+tags: [overfitting, lasso, ridge]
 ---
 
 
