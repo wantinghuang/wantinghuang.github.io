@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Microsoft Data Scientist Interview
+tags: [interview]
 ---
 微軟資料科學家面試大致上分為四部分：團隊介紹、自介和經歷、白板題、提問
 
