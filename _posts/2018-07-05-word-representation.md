@@ -125,13 +125,13 @@ Negative Sampling 只更新一部份的 output vectors，因此 loss function �
 
 ![NEG objective function](https://i.imgur.com/SvTUhon.png)
 
-Mikolov 表示:
-the task is to distinguish the target word $w_{O}$ from draws from the noise distribution $P_{n}(w)$ using logistic regression, where there are $k$ negative samples for each data sample.
+> Mikolov 表示:
+> the task is to distinguish the target word $w_{O}$ from draws from the noise distribution $P_{n}(w)$ using logistic regression, where there are $k$ negative samples for each data sample.
 
 What is a good $P_{n}(w)$ ?
 
-Mikolov 表示:
-We investigated a number of choices for $P_{n}(w)$ and found that the unigram distribution $U(w)$ raised to the 3/4rd power (i.e., $U(w)^{3/4}/Z$ ) outperformed significantly the unigram and the uniform distributions.
+> Mikolov 表示:
+> We investigated a number of choices for $P_{n}(w)$ and found that the unigram distribution $U(w)$ raised to the 3/4rd power (i.e., $U(w)^{3/4}/Z$ ) outperformed significantly the unigram and the uniform distributions.
 
 也就是說，現在還沒有科學的方法說明如何挑選 $P_{n}(w)$，不過經驗法則所找到的函數，其產生的結果的表現勝過現有的其他模型。
 
