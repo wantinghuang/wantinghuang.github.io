@@ -107,6 +107,7 @@ word2vec方法的瓶頸在於 output layer 的神經元個數 (也就是 output 
 
 
 large vocabularies or large training corpora &rarr; expensive computations 
+
 &rArr; limit the number of output vectors that must be updated per training instance &rarr; hierarchical softmax, sampling
 
 #### Hierarchical Softmax
