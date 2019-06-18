@@ -49,7 +49,8 @@ AlphaGo跟李世乭對弈的第四局，AlphaGo輸了，後來 DeepMind 團隊�
 <!-- don't use high order model -->
 2. regularization。像 LASSO、Ridge regression 都是用來限制解空間、解決 overfitting 的好工具。
 <!-- ## Why regularization can solve overfitting? -->
-3. 將資料分堆，做 dropout 和 cross validation。
+3. 將資料分堆，做 cross validation。
+4. dropout。
 
 <!-- 4. decision tree 做 feature selection -->
 
