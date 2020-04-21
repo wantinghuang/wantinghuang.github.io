@@ -10,7 +10,7 @@ Word Representation，意指用一組數字來代表文字的方式。事實上�
 文字之所以重要，是因為文字本身帶有意涵，我們能從文字中讀到其背後的意義，甚至會對文字的意涵做更多的分析。在計算語言學中就引發了一個問題: 「**有沒有辦法用一組數字來代表文字的意涵?**」 如果今天有了這樣的一組數字，我們便可將文字可以放到現有的數學模型中分析。
 
 ## Word Representation 的演變
-要把文字轉成數字，簡單的方法就是做 one-hot encoding/representation (統計上稱為 dummy variable)，也就是令一個向量，長度為所有出現過的字的個數(vocabulary list)，這個向量的每一個位置會對應到 vocabulary list 裡面的某一個字，則每個字可以由某個位置為1，其餘為0的向量代表。如下圖所示
+要把文字轉成數字，簡單的方法就是做 one-hot encoding/representation (統計上稱為 dummy variable)，也就是令一個向量，長度為所有出現過的字的個數（我們把出現過的字寫成一個列表，稱為 vocabulary list），這個向量的每一個位置會對應到 vocabulary list 裡面的某一個字，則每個字可以由某個位置為1，其餘為0的向量代表。如下圖所示
 ![one-hot representation](https://i.imgur.com/NpjvCyC.png)
 我們可以觀察到兩個點:
 1. 字的向量跟 vocabulary list 的順序有關係；也就是說換個順序，字就有不同的向量表示，所以 vocabulary list 要先固定。
