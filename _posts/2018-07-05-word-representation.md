@@ -3,11 +3,11 @@ layout: post
 title: Word Representation and Word Embeddings
 tags: [NLP, Data Science]
 ---
-Word Representation，意指用一組數字來代表文字的行為/方式。事實上，有很多種方式可以用一組數字代表文字，目前兩個主流的方式分別為 Distributional Semantics 和 Word Embeddings，而 Word Embeddings 是近年來常用的方式。[1]
+Word Representation，意指用一組數字來代表文字的方式。事實上，有很多種方式可以用一組數字代表文字，目前兩個主流的方式分別為 Distributional Semantics 和 Word Embeddings，而 Word Embeddings 是近年來常用的方式。[1]
 <!-- more -->  
 
 ## 為什麼需要 Word Representation?
-文字之所以重要，是因為文字本身帶有意涵，我們能從文字中讀到的是其背後的意義，想要對文字的意涵做更多的分析，在計算語言學中就引發了一個問題: 「**有沒有辦法用一組數字來代表文字的意涵?**」 有了這樣的一組數字，我們便可將文字可以放到數學模型中分析。
+文字之所以重要，是因為文字本身帶有意涵，我們能從文字中讀到其背後的意義，甚至會對文字的意涵做更多的分析。在計算語言學中就引發了一個問題: 「**有沒有辦法用一組數字來代表文字的意涵?**」 如果今天有了這樣的一組數字，我們便可將文字可以放到現有的數學模型中分析。
 
 ## Word Representation 的演變
 要把文字轉成數字，簡單的方法就是做 one-hot encoding/representation (統計上稱為 dummy variable)，也就是令一個向量，長度為所有出現過的字的個數(vocabulary list)，這個向量的每一個位置會對應到 vocabulary list 裡面的某一個字，則每個字可以由某個位置為1，其餘為0的向量代表。如下圖所示
